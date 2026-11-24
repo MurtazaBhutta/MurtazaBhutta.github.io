@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ghulam Murtaza · Senior Python &amp; AI Engineer</title>
+<meta name="description" content="Senior Python & AI Engineer: Django/DRF and FastAPI backends, LLMs, RAG and production multi-agent systems serving 200+ enterprise tenants. Remote, available for US EST hours.">
+<meta property="og:title" content="Ghulam Murtaza · Senior Python & AI Engineer">
+<meta property="og:description" content="Django/DRF & FastAPI backends, LLMs, RAG and production multi-agent systems serving 200+ enterprise tenants.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://murtazabhutta.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d4ed8'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='white' text-anchor='middle'%3EGM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f8fafc;
+    --surface: #ffffff;
+    --surface-2: #f1f5f9;
+    --text: #0f172a;
+    --muted: #475569;
+    --faint: #64748b;
+    --border: #e2e8f0;
+    --accent: #1d4ed8;
+    --accent-soft: #dbeafe;
+    --accent-text: #1e40af;
+    --ok: #047857;
+    --ok-soft: #d1fae5;
+    --shadow: 0 1px 2px rgba(15,23,42,.05), 0 4px 16px rgba(15,23,42,.05);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b1120;
+      --surface: #111a2e;
+      --surface-2: #16213a;
+      --text: #e2e8f0;
+      --muted: #a5b4c8;
+      --faint: #8494ab;
+      --border: #24314d;
+      --accent: #60a5fa;
+      --accent-soft: #172b52;
+      --accent-text: #93c5fd;
+      --ok: #34d399;
+      --ok-soft: #0f3a2e;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.25);
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+  /* nav */
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 16px; }
+  .brand { font-weight: 700; color: var(--text); letter-spacing: -.01em; }
+  .brand:hover { text-decoration: none; }
+  .navlinks { display: flex; gap: 22px; font-size: 14px; font-weight: 500; }
+  .navlinks a { color: var(--muted); }
+  .navlinks a:hover { color: var(--text); text-decoration: none; }
+  @media (max-width: 720px) { .navlinks { display: none; } }
+
+  /* hero */
+  header.hero { padding: 72px 0 48px; }
+  .status {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 13px; font-weight: 600; color: var(--ok);
+    background: var(--ok-soft); padding: 5px 12px; border-radius: 999px;
+  }
+  .status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--ok); }
+  h1 { font-size: clamp(36px, 6vw, 56px); line-height: 1.08; letter-spacing: -.03em; margin: 20px 0 8px; font-weight: 800; }
+  .role { font-size: clamp(18px, 2.6vw, 24px); font-weight: 600; color: var(--accent-text); margin: 0 0 18px; letter-spacing: -.01em; }
+  .lede { font-size: 18px; color: var(--muted); max-width: 720px; margin: 0 0 28px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 11px 18px; border-radius: 10px; font-weight: 600; font-size: 15px;
+    border: 1px solid var(--border); background: var(--surface); color: var(--text);
+    box-shadow: var(--shadow);
+  }
+  .btn:hover { text-decoration: none; border-color: var(--accent); }
+  .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+  @media (prefers-color-scheme: dark) { .btn.primary { color: #0b1120; } }
+  .btn svg { width: 18px; height: 18px; flex: none; }
+  .meta { margin-top: 22px; font-size: 14px; color: var(--faint); display: flex; flex-wrap: wrap; gap: 6px 18px; }
+
+  /* stats */
+  .stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin: 8px 0 0; }
+  @media (max-width: 860px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+  .stat { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 18px; box-shadow: var(--shadow); }
+  .stat b { display: block; font-size: 28px; font-weight: 800; letter-spacing: -.02em; line-height: 1.1; }
+  .stat span { font-size: 13px; color: var(--muted); }
+
+  /* sections */
+  section { padding: 56px 0; }
+  section + section { border-top: 1px solid var(--border); }
+  h2 { font-size: 28px; letter-spacing: -.02em; margin: 0 0 6px; font-weight: 750; }
+  .sub { color: var(--muted); margin: 0 0 28px; max-width: 720px; }
+  h3 { font-size: 18px; margin: 0; letter-spacing: -.01em; font-weight: 700; }
+
+  .grid2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  @media (max-width: 860px) { .grid3 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .grid2, .grid3 { grid-template-columns: 1fr; } }
+
+  .card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+    padding: 22px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 10px;
+  }
+  .card p { margin: 0; color: var(--muted); font-size: 15px; }
+  .card ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 15px; }
+  .card li + li { margin-top: 4px; }
+  .card .result { color: var(--text); font-weight: 600; font-size: 14px; }
+  .kicker { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--faint); }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 6px; }
+  .tag {
+    font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 12px;
+    background: var(--surface-2); color: var(--muted); border: 1px solid var(--border);
+    padding: 2px 8px; border-radius: 6px;
+  }
+  .card.feature { border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); }
+  .repo-link { font-weight: 600; font-size: 14px; display: inline-flex; align-items: center; gap: 6px; }
+  .repo-link svg { width: 16px; height: 16px; }
+
+  /* skills */
+  .skill-group h3 { font-size: 15px; margin-bottom: 10px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { font-size: 14px; padding: 5px 11px; border-radius: 8px; background: var(--surface-2); border: 1px solid var(--border); }
+  .chip.key { background: var(--accent-soft); border-color: transparent; color: var(--accent-text); font-weight: 600; }
+
+  /* timeline */
+  .timeline { position: relative; display: flex; flex-direction: column; gap: 18px; }
+  .job { display: grid; grid-template-columns: 180px 1fr; gap: 24px; }
+  @media (max-width: 720px) { .job { grid-template-columns: 1fr; gap: 6px; } }
+  .when { font-size: 14px; color: var(--faint); font-weight: 600; padding-top: 22px; }
+  @media (max-width: 720px) { .when { padding-top: 0; } }
+  .job .card h3 span { font-weight: 500; color: var(--muted); }
+
+  /* contact */
+  .contact { text-align: center; }
+  .contact .cta { justify-content: center; }
+  .contact .sub { margin-left: auto; margin-right: auto; }
+  footer { padding: 28px 0 40px; text-align: center; font-size: 13px; color: var(--faint); border-top: 1px solid var(--border); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Ghulam Murtaza</a>
+    <div class="navlinks">
+      <a href="#skills">Skills</a>
+      <a href="#open-source">Open source</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+  <header class="hero">
+    <div class="wrap">
+      <span class="status">Open to remote roles · available for US EST hours</span>
+      <h1>Ghulam Murtaza</h1>
+      <p class="role">Senior Python &amp; AI Engineer: Django, LLMs, RAG, Agentic AI</p>
+      <p class="lede">
+        I build production Python backends and the AI systems that run on them: Django/DRF and
+        FastAPI services, PostgreSQL data layers, RAG pipelines and multi-agent LLM platforms.
+        I currently own a multi-tenant agent platform serving <strong>200+ enterprise tenants</strong>,
+        with four AI agents in production behind automated evaluation gates.
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="Ghulam_Murtaza_CV.pdf" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
+          Download CV
+        </a>
+        <a class="btn" href="https://github.com/MurtazaBhutta" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 007.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 015.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+          GitHub
+        </a>
+        <a class="btn" href="https://linkedin.com/in/ghulam-murtaza-9024071a5" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          LinkedIn
+        </a>
+        <a class="btn" href="mailto:murtazakhannuml@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          Email
+        </a>
+      </div>
+      <div class="meta">
+        <span>📍 Lahore, Pakistan (UTC+5)</span>
+        <span>6+ years production Python</span>
+        <span>2.5+ years shipping LLM products</span>
+        <span>Django in production since 2020</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><b>200+</b><span>enterprise tenants on the agent platform I own</span></div>
+      <div class="stat"><b>4</b><span>AI agents live in production</span></div>
+      <div class="stat"><b>40%</b><span>faster decision queries via graph RAG</span></div>
+      <div class="stat"><b>22%</b><span>lift in quote-to-win conversion (ML)</span></div>
+      <div class="stat"><b>99.8%</b><span>uptime on the production RAG system</span></div>
+    </div>
+  </div>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <p class="sub">Backend engineering and applied AI, used together in production. Highlighted items are the ones I use daily.</p>
+      <div class="grid2">
+        <div class="card skill-group">
+          <h3>Backend &amp; APIs</h3>
+          <div class="chips">
+            <span class="chip key">Python</span><span class="chip key">Django</span><span class="chip key">Django REST Framework</span>
+            <span class="chip key">FastAPI</span><span class="chip">REST API design</span><span class="chip">Celery</span>
+            <span class="chip">Microservices</span><span class="chip">Webhooks</span><span class="chip">Event-driven design</span>
+            <span class="chip">Gunicorn / Nginx</span><span class="chip">MQTT</span>
+          </div>
+        </div>
+        <div class="card skill-group">
+          <h3>Generative AI &amp; LLMs</h3>
+          <div class="chips">
+            <span class="chip key">LLM integration</span><span class="chip key">RAG</span><span class="chip key">LangGraph</span>
+            <span class="chip key">LangChain</span><span class="chip">Azure OpenAI / GPT-4</span><span class="chip">Anthropic Claude</span>
+            <span class="chip">Structured outputs</span><span class="chip">Tool / function calling</span><span class="chip">Multi-agent systems</span>
+            <span class="chip">MCP</span><span class="chip">Embeddings &amp; re-ranking</span><span class="chip">Hugging Face</span><span class="chip">Fine-tuning</span>
+          </div>
+        </div>
+        <div class="card skill-group">
+          <h3>Machine Learning</h3>
+          <div class="chips">
+            <span class="chip key">PyTorch</span><span class="chip key">TensorFlow</span><span class="chip">Keras</span>
+            <span class="chip">Scikit-learn</span><span class="chip">XGBoost</span><span class="chip">LightGBM</span>
+            <span class="chip">NLP</span><span class="chip">Time-series forecasting</span><span class="chip">Computer vision (CNNs)</span>
+          </div>
+        </div>
+        <div class="card skill-group">
+          <h3>Databases &amp; Data</h3>
+          <div class="chips">
+            <span class="chip key">PostgreSQL</span><span class="chip">Query optimisation</span><span class="chip">Row-level security</span>
+            <span class="chip">Redis</span><span class="chip">Neo4j</span><span class="chip">Pinecone</span><span class="chip">Azure Cosmos DB</span>
+            <span class="chip">MySQL</span><span class="chip">InfluxDB</span><span class="chip">Spark</span><span class="chip">Pandas</span>
+          </div>
+        </div>
+        <div class="card skill-group">
+          <h3>Cloud, MLOps &amp; Delivery</h3>
+          <div class="chips">
+            <span class="chip key">Docker</span><span class="chip key">Azure</span><span class="chip">Kubernetes</span>
+            <span class="chip">GitHub Actions CI/CD</span><span class="chip">MLflow</span><span class="chip">Azure Databricks</span>
+            <span class="chip">AWS SageMaker</span><span class="chip">GCP Vertex AI</span><span class="chip">Airflow</span>
+          </div>
+        </div>
+        <div class="card skill-group">
+          <h3>AI Quality &amp; Safety</h3>
+          <div class="chips">
+            <span class="chip key">LLM evaluation gates</span><span class="chip">promptfoo</span><span class="chip">LangSmith</span>
+            <span class="chip">Guardrails</span><span class="chip">Human-in-the-loop</span><span class="chip">Audit logging</span>
+            <span class="chip">Tenant data isolation</span><span class="chip">Cost guardrails</span><span class="chip">TDD</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="open-source">
+    <div class="wrap">
+      <h2>Open source: code you can read</h2>
+      <p class="sub">My production work is proprietary, so these are clean-room rebuilds of patterns I run in production, on synthetic data, with tests and CI.</p>
+      <div class="grid2">
+        <div class="card feature">
+          <span class="kicker">LLMOps · CI/CD</span>
+          <h3>llm-release-gate</h3>
+          <p>A regression evaluation harness wired into CI as a required check: an LLM change that makes behaviour worse fails the pull request. Tiered scoring, absolute safety floors that a worse baseline can't override, and a self-test job that fails if the gate ever stops gating.</p>
+          <p class="result">Catches unsafe outputs, schema breaks and accuracy drops before they ship.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">pytest</span><span class="tag">GitHub Actions</span><span class="tag">LLM evals</span><span class="tag">structured outputs</span></div>
+          <a class="repo-link" href="https://github.com/MurtazaBhutta/llm-release-gate" target="_blank" rel="noopener">View on GitHub →</a>
+        </div>
+        <div class="card feature">
+          <span class="kicker">Agent safety · PostgreSQL</span>
+          <h3>agent-guardrail-runtime</h3>
+          <p>Seven composable middleware layers around an agent's model call: kill switch, input/output guardrails, human approval, per-tenant spend cap, audit trail, tracing and retries. Tenant isolation is enforced by PostgreSQL row-level security rather than by remembering to filter queries.</p>
+          <p class="result">Design decisions recorded as ADRs; isolation proven by adversarial tests.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">PostgreSQL RLS</span><span class="tag">Docker</span><span class="tag">pytest</span><span class="tag">ADRs</span></div>
+          <a class="repo-link" href="https://github.com/MurtazaBhutta/agent-guardrail-runtime" target="_blank" rel="noopener">View on GitHub →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Production AI/ML projects</h2>
+      <p class="sub">Systems I designed and shipped for employers. Code is proprietary, so outcomes are described rather than linked.</p>
+      <div class="grid3">
+        <div class="card">
+          <span class="kicker">Joblogic · 2026</span>
+          <h3>Agent Forge: multi-tenant agent platform</h3>
+          <p>The LangGraph platform every Joblogic AI agent runs on: multi-agent orchestration, persistent memory, human-approval controls, per-tenant safety and cost guardrails, and row-level tenant isolation.</p>
+          <p class="result">200+ enterprise tenants · every release passes an eval gate</p>
+          <div class="tags"><span class="tag">LangGraph</span><span class="tag">Azure</span><span class="tag">PostgreSQL</span></div>
+        </div>
+        <div class="card">
+          <span class="kicker">Joblogic · 2026</span>
+          <h3>Sarah: multi-agent customer helpdesk</h3>
+          <p>Handles inbound customer email and phone calls end to end (job logging, quoting, site resolution) with a supervisor and 9 specialist sub-agents over voice and email.</p>
+          <p class="result">Owned from PRD to production through 66 releases</p>
+          <div class="tags"><span class="tag">LangGraph</span><span class="tag">Twilio</span><span class="tag">ElevenLabs</span><span class="tag">Nylas</span></div>
+        </div>
+        <div class="card">
+          <span class="kicker">Joblogic · 2026</span>
+          <h3>Autonomous invoice processing</h3>
+          <p>Reads supplier invoice emails, matches them to jobs, checks duplicates, costs and completes the job. Anything not safely matchable escalates to a human with a stated reason instead of a guess.</p>
+          <p class="result">Proof-of-concept to production across 14 releases</p>
+          <div class="tags"><span class="tag">Document AI</span><span class="tag">Structured outputs</span><span class="tag">HITL</span></div>
+        </div>
+        <div class="card">
+          <span class="kicker">Joblogic · 2025</span>
+          <h3>Talk to My Data: graph RAG</h3>
+          <p>Natural-language Q&amp;A over 50K+ service records, built as RAG on LangChain and Azure OpenAI over Neo4j-modelled business relationships.</p>
+          <p class="result">−40% decision query time · −30% support tickets · 99.8% uptime</p>
+          <div class="tags"><span class="tag">RAG</span><span class="tag">LangChain</span><span class="tag">Neo4j</span><span class="tag">Azure OpenAI</span></div>
+        </div>
+        <div class="card">
+          <span class="kicker">Joblogic · 2025</span>
+          <h3>Engineer prediction &amp; quote analytics</h3>
+          <p>ML suite for engineer allocation, quote win probability and quote exploration, with automated retraining on Azure Databricks and MLflow.</p>
+          <p class="result">+22% quote-to-win · deploy cycle cut from 2 weeks to 3 days</p>
+          <div class="tags"><span class="tag">XGBoost</span><span class="tag">LightGBM</span><span class="tag">MLflow</span><span class="tag">Databricks</span></div>
+        </div>
+        <div class="card">
+          <span class="kicker">Joblogic · 2026</span>
+          <h3>Event-driven job intake agent</h3>
+          <p>Creates jobs automatically from third-party portal bookings. The LLM classifies each booking against a 140-rule mapping; deterministic code performs the writes with idempotency and full audit trails.</p>
+          <p class="result">Removed manual re-keying entirely · caught 3 defects pre-rollout</p>
+          <div class="tags"><span class="tag">Event-driven</span><span class="tag">Idempotency</span><span class="tag">LLM classification</span></div>
+        </div>
+        <div class="card">
+          <span class="kicker">Exergy Systems · 2024</span>
+          <h3>LLM advisory chatbot &amp; Django scoring API</h3>
+          <p>GPT-4 + LangChain advisory chatbot with Pinecone search over a nutrition knowledge base, plus Django REST microservices for real-time nutritional scoring.</p>
+          <p class="result">40+ operators · +35% semantic accuracy · sub-200 ms API responses</p>
+          <div class="tags"><span class="tag">Django REST</span><span class="tag">GPT-4</span><span class="tag">Pinecone</span></div>
+        </div>
+        <div class="card">
+          <span class="kicker">Exergy Systems · 2024</span>
+          <h3>AI feed-optimisation engine</h3>
+          <p>Combines linear programming with ML models to formulate feed for poultry, fish and livestock at full nutritional compliance.</p>
+          <p class="result">−18% ingredient cost at 100% nutritional compliance</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Optimisation</span><span class="tag">ML</span></div>
+        </div>
+        <div class="card">
+          <span class="kicker">NCS · 2024</span>
+          <h3>Geospatial deep learning &amp; NLP chatbot</h3>
+          <p>TensorFlow time-series models for bus-stop detection, and an intent-classification chatbot for trip reservations, served from a containerised inference stack.</p>
+          <p class="result">94.3% precision · 2,000+ daily chats · cold start 8 s → 1.2 s</p>
+          <div class="tags"><span class="tag">TensorFlow</span><span class="tag">Docker</span><span class="tag">Kubernetes</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <h2>Experience</h2>
+      <p class="sub">Six years of production Python, moving from Django backends into applied ML and then LLM platforms.</p>
+      <div class="timeline">
+        <div class="job">
+          <div class="when">Mar 2025 – Present</div>
+          <div class="card">
+            <h3>Senior AI / ML Engineer <span>· Joblogic (UK field-service SaaS, remote)</span></h3>
+            <ul>
+              <li>Own design and delivery of Joblogic's AI products end to end, from predictive ML and RAG to a multi-tenant agent platform serving 200+ enterprise tenants.</li>
+              <li>Shipped four production agents (helpdesk, operations, invoice processing, job intake), each released through an automated evaluation gate with audit trails and human escalation.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="job">
+          <div class="when">Apr 2024 – Mar 2025</div>
+          <div class="card">
+            <h3>Senior AI / Python Developer <span>· Exergy Systems (AgriTech)</span></h3>
+            <ul>
+              <li>Built Django REST microservices for real-time nutritional scoring: 500+ daily API calls at sub-200 ms.</li>
+              <li>Designed a GPT-4 + LangChain advisory chatbot with Pinecone vector search, adopted by 40+ farm operators.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="job">
+          <div class="when">Jan 2024 – Oct 2024</div>
+          <div class="card">
+            <h3>AI System Engineer <span>· NCS (Smart Transportation)</span></h3>
+            <ul>
+              <li>Trained TensorFlow geospatial time-series models (94.3% precision, −60% manual annotation).</li>
+              <li>Containerised ML inference with Docker and Kubernetes: 99.5% uptime, cold start cut from 8 s to 1.2 s.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="job">
+          <div class="when">Dec 2021 – Jan 2024</div>
+          <div class="card">
+            <h3>Python Developer <span>· Epazz (Drone Automation)</span></h3>
+            <ul>
+              <li>Built AI-enabled Django applications for real-time drone monitoring with MQTT telemetry, InfluxDB and ML anomaly detection across 15+ concurrent feeds.</li>
+              <li>Deployed with Docker, Gunicorn, Nginx and Celery: 1,000+ concurrent events, zero downtime over 18 months; set up GitHub Actions CI/CD.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="job">
+          <div class="when">Apr 2020 – Nov 2021</div>
+          <div class="card">
+            <h3>Analyst Software Engineer <span>· Ibex.TRG (Analytics &amp; AI)</span></h3>
+            <ul>
+              <li>Developed Django REST applications and NLP classification models for analytics platforms serving 10,000+ daily users.</li>
+              <li>Built a churn-prediction model (87% AUC-ROC) that informed a 12% churn reduction.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="job">
+          <div class="when">Education</div>
+          <div class="card">
+            <h3>BS Computer Science <span>· NUML Islamabad, 2016 – 2020</span></h3>
+            <p>Artificial Intelligence Intensive Programme, PM Kamyab Jawan (NAVTTC), 2020 – 2021 · GitHub Associate certification</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Let's talk</h2>
+      <p class="sub">Open to full-time remote roles in Python backend and AI/ML engineering. Available to work US EST hours.</p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:murtazakhannuml@gmail.com">murtazakhannuml@gmail.com</a>
+        <a class="btn" href="Ghulam_Murtaza_CV.pdf" download>Download CV</a>
+        <a class="btn" href="https://linkedin.com/in/ghulam-murtaza-9024071a5" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Ghulam Murtaza · <a href="https://github.com/MurtazaBhutta">github.com/MurtazaBhutta</a></div>
+</footer>
+
+</body>
+</html>
