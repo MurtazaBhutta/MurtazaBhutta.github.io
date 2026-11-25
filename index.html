@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ghulam Murtaza · Senior Python &amp; AI Engineer</title>
-<meta name="description" content="Senior Python & AI Engineer with 6+ years in production: Django/DRF and FastAPI backends, LLMs, RAG and multi-agent systems serving 200+ enterprise tenants. Remote, available for US EST hours.">
-<meta property="og:title" content="Ghulam Murtaza · Senior Python & AI Engineer">
-<meta property="og:description" content="Django/DRF & FastAPI backends, LLMs, RAG and production multi-agent systems serving 200+ enterprise tenants.">
+<title>Ghulam Murtaza · Senior GenAI &amp; Forward Deployed Engineer</title>
+<meta name="description" content="Senior Generative AI and Forward Deployed Engineer: 4.5+ years in GenAI, 6+ years production Python. Agentic AI, RAG, LLM evaluation and LLMOps, taken from PoC to production for 200+ enterprise tenants. Remote or relocation.">
+<meta property="og:title" content="Ghulam Murtaza · Senior GenAI & Forward Deployed Engineer">
+<meta property="og:description" content="Agentic AI, RAG, LLM evaluation and LLMOps, taken from PoC to production for 200+ enterprise tenants.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://murtazabhutta.github.io/">
 <meta property="og:image" content="https://murtazabhutta.github.io/photo.png">
@@ -152,7 +152,12 @@
   .grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
   .grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
   @media (max-width: 980px) { .grid3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  @media (max-width: 680px) { .grid2, .grid3 { grid-template-columns: 1fr; } }
+  .grid4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+  @media (max-width: 1080px) { .grid4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 680px) { .grid2, .grid3, .grid4 { grid-template-columns: 1fr; } }
+  .step .num { width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; font-weight: 800; color: #fff; background: linear-gradient(135deg, var(--accent), var(--accent-2)); }
+  @media (prefers-color-scheme: dark) { .step .num { color: #0b1120; } }
+  .step .result { margin-top: auto; font-size: 14px; font-weight: 600; color: var(--text); }
 
   .card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 12px; }
   .card p { margin: 0; color: var(--muted); font-size: 15px; }
@@ -217,6 +222,7 @@
   <div class="wrap">
     <a class="brand" href="#top">Ghulam Murtaza</a>
     <div class="navlinks">
+      <a href="#delivery">How I deliver</a>
       <a href="#work">Case studies</a>
       <a href="#open-source">Open source</a>
       <a href="#skills">Skills</a>
@@ -234,10 +240,11 @@
         <div>
           <span class="status">Open to remote roles &amp; relocation · available for US EST hours</span>
           <h1>Ghulam Murtaza</h1>
-          <p class="role">Senior Python &amp; AI Engineer<br>Django · LLMs · RAG · Agentic AI</p>
+          <p class="role">Senior Generative AI &amp; Forward Deployed Engineer<br>Agentic AI · RAG · LLMOps · PoC to Production</p>
           <p class="lede">
-            I build production Python backends and the AI systems that run on them:
-            <strong>Django/DRF and FastAPI services, PostgreSQL, RAG pipelines and multi-agent LLM platforms</strong>.
+            I take generative AI from a loosely defined business problem to a <strong>measured, auditable production service</strong>:
+            scoping with the customer, prototyping fast, then hardening with evaluation, guardrails and monitoring.
+            <strong>4.5+ years in GenAI</strong> on top of 6+ years of production Python (Django, FastAPI).
             Today I own a multi-tenant agent platform serving <strong>200+ enterprise tenants</strong>,
             with five AI agents in production behind automated evaluation gates.
           </p>
@@ -270,9 +277,11 @@
             </div>
           </div>
           <dl class="facts">
-            <dt>Experience</dt><dd>6+ yrs Python · 2.5+ yrs LLMs</dd>
-            <dt>Core stack</dt><dd>Django, DRF, FastAPI, PostgreSQL</dd>
-            <dt>AI focus</dt><dd>LLMs, RAG, LangGraph agents</dd>
+            <dt>Experience</dt><dd>4.5+ yrs GenAI · 6+ yrs Python</dd>
+            <dt>Core stack</dt><dd>LLMs, LangGraph, RAG, MCP, Python</dd>
+            <dt>Delivery</dt><dd>Forward deployed · PoC → production</dd>
+            <dt>Quality</dt><dd>Eval gates, guardrails, HITL</dd>
+            <dt>Backend</dt><dd>Django, DRF, FastAPI, PostgreSQL</dd>
             <dt>Work model</dt><dd>Remote · full-time</dd>
             <dt>Hours</dt><dd>US EST available</dd>
             <dt>Relocation</dt><dd>UAE · KSA · GCC · UK</dd>
@@ -290,6 +299,41 @@
       </div>
     </div>
   </header>
+
+  <!-- FORWARD-DEPLOYED DELIVERY -->
+  <section id="delivery" class="band alt">
+    <div class="wrap">
+      <p class="eyebrow">Forward-deployed delivery</p>
+      <h2>How I take GenAI from idea to production</h2>
+      <p class="sub">I own the whole delivery loop with the customer, not only the model call, and explain the trade-offs clearly to non-technical stakeholders.</p>
+      <div class="grid4">
+        <article class="card step">
+          <span class="num">1</span>
+          <h3>Scope with the customer</h3>
+          <p>Work with product owners and business users to turn a loosely defined problem into a measurable use case with agreed success criteria.</p>
+          <p class="result">Sarah helpdesk: PRD → production in 66 releases</p>
+        </article>
+        <article class="card step">
+          <span class="num">2</span>
+          <h3>Prototype fast, on real data</h3>
+          <p>Build a working proof of concept quickly and test it end to end against live accounts and real workflows, not demo data.</p>
+          <p class="result">3 production-breaking defects caught before go-live</p>
+        </article>
+        <article class="card step">
+          <span class="num">3</span>
+          <h3>Harden for production</h3>
+          <p>Add evaluation gates, guardrails, idempotency, fail-closed validation, audit trails, monitoring and human escalation, then roll out safely.</p>
+          <p class="result">Invoice agent: PoC → production in 14 releases</p>
+        </article>
+        <article class="card step">
+          <span class="num">4</span>
+          <h3>Configure &amp; reuse</h3>
+          <p>Turn customer-specific rules into configuration instead of code, then package the work as reusable accelerators so the next delivery is faster.</p>
+          <p class="result">140-rule mappings & per-customer billing with no code changes</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
   <!-- CASE STUDIES -->
   <section id="work" class="band">
@@ -487,10 +531,6 @@
       <p class="sub">Highlighted items are what I use every day.</p>
       <div class="skills">
         <div class="card">
-          <h3>Backend &amp; APIs</h3>
-          <div class="chips"><span class="chip key">Python</span><span class="chip key">Django</span><span class="chip key">Django REST Framework</span><span class="chip key">FastAPI</span><span class="chip">asyncio &amp; concurrency</span><span class="chip">REST API &amp; SDK design</span><span class="chip">Microservices</span><span class="chip">Event-driven systems</span><span class="chip">Webhooks</span><span class="chip">Celery</span><span class="chip">Gunicorn / Nginx</span></div>
-        </div>
-        <div class="card">
           <h3>Generative AI &amp; LLMs</h3>
           <div class="chips"><span class="chip key">LLM integration</span><span class="chip key">RAG</span><span class="chip">Azure OpenAI / GPT-4</span><span class="chip">Anthropic Claude API</span><span class="chip">Structured outputs</span><span class="chip">Prompt &amp; ruleset engineering</span><span class="chip">Embeddings</span><span class="chip">Re-ranking</span><span class="chip">Fine-tuning</span><span class="chip">Transformers</span><span class="chip">Hugging Face</span><span class="chip">BERT</span><span class="chip">Document intelligence</span></div>
         </div>
@@ -503,6 +543,14 @@
           <div class="chips"><span class="chip key">Evaluation gates</span><span class="chip">promptfoo</span><span class="chip">LangSmith</span><span class="chip">LLM-as-judge</span><span class="chip">Scenario test packs</span><span class="chip">Guardrails</span><span class="chip">Human-in-the-loop</span><span class="chip">Fail-closed validation</span><span class="chip">Audit trails</span><span class="chip">Tracing &amp; observability</span><span class="chip">Drift detection</span><span class="chip">Tenant data isolation</span></div>
         </div>
         <div class="card">
+          <h3>Forward-Deployed Delivery</h3>
+          <div class="chips"><span class="chip key">PoC → production</span><span class="chip key">Customer scoping</span><span class="chip">Stakeholder communication</span><span class="chip">PRD writing</span><span class="chip">Rapid prototyping</span><span class="chip">Per-customer configuration</span><span class="chip">Reusable accelerators</span><span class="chip">Safe rollout</span><span class="chip">Technical documentation</span><span class="chip">Agile / Scrum</span><span class="chip">TDD</span><span class="chip">ADRs</span></div>
+        </div>
+        <div class="card">
+          <h3>Backend &amp; APIs</h3>
+          <div class="chips"><span class="chip key">Python</span><span class="chip key">Django</span><span class="chip key">Django REST Framework</span><span class="chip key">FastAPI</span><span class="chip">asyncio &amp; concurrency</span><span class="chip">REST API &amp; SDK design</span><span class="chip">Microservices</span><span class="chip">Event-driven systems</span><span class="chip">Webhooks</span><span class="chip">Celery</span><span class="chip">Gunicorn / Nginx</span></div>
+        </div>
+        <div class="card">
           <h3>Voice, Conversational AI &amp; Integrations</h3>
           <div class="chips"><span class="chip key">Twilio</span><span class="chip key">ElevenLabs</span><span class="chip">Pipecat</span><span class="chip">Deepgram (STT)</span><span class="chip">Nylas (email)</span><span class="chip">Intent classification</span><span class="chip">Slot filling</span><span class="chip">HubSpot</span><span class="chip">MQTT</span></div>
         </div>
@@ -511,16 +559,12 @@
           <div class="chips"><span class="chip key">PyTorch</span><span class="chip key">TensorFlow</span><span class="chip">Keras</span><span class="chip">Scikit-learn</span><span class="chip">XGBoost</span><span class="chip">LightGBM</span><span class="chip">NLP</span><span class="chip">Computer vision (CNNs)</span><span class="chip">Time-series forecasting</span><span class="chip">Anomaly detection</span><span class="chip">Linear programming</span></div>
         </div>
         <div class="card">
-          <h3>Data &amp; Analytics</h3>
-          <div class="chips"><span class="chip key">SQL</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Apache Spark</span><span class="chip">EDA</span><span class="chip">Feature engineering</span><span class="chip">ETL pipelines</span><span class="chip">Airflow</span><span class="chip">n8n</span></div>
+          <h3>Data, Databases &amp; Vector Stores</h3>
+          <div class="chips"><span class="chip key">PostgreSQL</span><span class="chip key">SQL</span><span class="chip">Row-level security</span><span class="chip">Neo4j</span><span class="chip">Pinecone</span><span class="chip">Redis</span><span class="chip">Azure Cosmos DB</span><span class="chip">MySQL</span><span class="chip">InfluxDB</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Apache Spark</span><span class="chip">EDA</span><span class="chip">ETL pipelines</span><span class="chip">Airflow</span><span class="chip">n8n</span></div>
         </div>
         <div class="card">
-          <h3>Databases &amp; Vector Stores</h3>
-          <div class="chips"><span class="chip key">PostgreSQL</span><span class="chip">Row-level security</span><span class="chip">Query optimisation</span><span class="chip">MySQL</span><span class="chip">Redis</span><span class="chip">Neo4j</span><span class="chip">Pinecone</span><span class="chip">Azure Cosmos DB</span><span class="chip">InfluxDB</span></div>
-        </div>
-        <div class="card">
-          <h3>Cloud, MLOps &amp; Practices</h3>
-          <div class="chips"><span class="chip key">Docker</span><span class="chip key">Azure</span><span class="chip">Kubernetes</span><span class="chip">GitHub Actions CI/CD</span><span class="chip">MLflow</span><span class="chip">Azure Databricks</span><span class="chip">Azure Functions · Blob · Service Bus</span><span class="chip">AWS SageMaker</span><span class="chip">GCP Vertex AI</span><span class="chip">TDD</span><span class="chip">Agile / Scrum</span><span class="chip">ADRs</span><span class="chip">Jira</span></div>
+          <h3>Cloud &amp; MLOps</h3>
+          <div class="chips"><span class="chip key">Azure</span><span class="chip key">Docker</span><span class="chip">Kubernetes</span><span class="chip">GitHub Actions CI/CD</span><span class="chip">MLflow</span><span class="chip">Azure Databricks</span><span class="chip">Azure Functions · Blob · Service Bus</span><span class="chip">AWS SageMaker</span><span class="chip">GCP Vertex AI</span><span class="chip">Jira</span></div>
         </div>
       </div>
     </div>
@@ -531,7 +575,7 @@
     <div class="wrap">
       <p class="eyebrow">Career</p>
       <h2>Experience</h2>
-      <p class="sub">Six years of production Python, from Django backends to applied ML and then LLM platforms.</p>
+      <p class="sub">6+ years of production Python and 4.5+ years in generative AI, from Django backends and applied ML to enterprise LLM platforms.</p>
       <div class="timeline">
         <div class="job">
           <div class="when">Mar 2025 – Present</div>
@@ -622,7 +666,7 @@
   <!-- CONTACT -->
   <section id="contact" class="band contact-band">
     <div class="wrap">
-      <h2>Hiring for Python, Django or AI engineering?</h2>
+      <h2>Hiring for GenAI, forward-deployed or Python engineering?</h2>
       <p class="sub">I'm open to full-time remote roles (US EST hours) and to relocation to the UAE, KSA, GCC or UK. Email is the fastest way to reach me.</p>
       <div class="cta">
         <a class="btn primary" href="mailto:murtazakhannuml@gmail.com">murtazakhannuml@gmail.com</a>
