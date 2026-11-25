@@ -232,14 +232,14 @@
     <div class="wrap">
       <div class="hero-grid">
         <div>
-          <span class="status">Open to remote, full-time roles · available for US EST hours</span>
+          <span class="status">Open to remote roles &amp; relocation · available for US EST hours</span>
           <h1>Ghulam Murtaza</h1>
           <p class="role">Senior Python &amp; AI Engineer<br>Django · LLMs · RAG · Agentic AI</p>
           <p class="lede">
             I build production Python backends and the AI systems that run on them:
             <strong>Django/DRF and FastAPI services, PostgreSQL, RAG pipelines and multi-agent LLM platforms</strong>.
             Today I own a multi-tenant agent platform serving <strong>200+ enterprise tenants</strong>,
-            with four AI agents in production behind automated evaluation gates.
+            with five AI agents in production behind automated evaluation gates.
           </p>
           <div class="cta">
             <a class="btn primary" href="Ghulam_Murtaza_CV.pdf" download>
@@ -275,6 +275,7 @@
             <dt>AI focus</dt><dd>LLMs, RAG, LangGraph agents</dd>
             <dt>Work model</dt><dd>Remote · full-time</dd>
             <dt>Hours</dt><dd>US EST available</dd>
+            <dt>Relocation</dt><dd>UAE · KSA · GCC · UK</dd>
             <dt>Location</dt><dd>Lahore, Pakistan</dd>
           </dl>
         </aside>
@@ -282,7 +283,7 @@
 
       <div class="stats">
         <div class="stat"><b>200+</b><span>enterprise tenants on the agent platform I own</span></div>
-        <div class="stat"><b>4</b><span>AI agents live in production</span></div>
+        <div class="stat"><b>5</b><span>AI agents live in production</span></div>
         <div class="stat"><b>−40%</b><span>decision query time with graph RAG</span></div>
         <div class="stat"><b>+22%</b><span>quote-to-win conversion from ML models</span></div>
         <div class="stat"><b>99.8%</b><span>uptime on the production RAG system</span></div>
@@ -297,6 +298,20 @@
       <h2>Case studies</h2>
       <p class="sub">Production systems I designed and shipped. The code belongs to my employers, so each one is written up as problem, my role, approach and result.</p>
       <div class="grid2">
+
+        <article class="card case">
+          <div class="case-head">
+            <div><span class="kicker">Joblogic · Early 2026 · Flagship</span><h3>Agent Forge: multi-tenant agent platform</h3></div>
+            <div class="metric"><b>200+</b><span>enterprise tenants</span></div>
+          </div>
+          <dl>
+            <div><dt>Problem</dt><dd>Every AI agent was being built as its own system, so safety, cost control and tenant isolation had to be solved again each time.</dd></div>
+            <div><dt>My role</dt><dd><strong>Designed and built the platform</strong> that every Joblogic AI agent now runs on.</dd></div>
+            <div><dt>Approach</dt><dd>Async orchestration turns email, system events and scheduled sweeps into LangGraph multi-agent workflows, with graph- and vector-backed memory. A <strong>versioned tool registry with MCP-compatible adapters</strong> keeps contracts backward compatible. A 7-layer middleware runtime adds kill switch, guardrails, human approval, cost guard, step recorder, tracing and retries, and a tenant portal uses <strong>PostgreSQL row-level security across 14 tables</strong>.</dd></div>
+            <div><dt>Result</dt><dd><strong>5 production agents</strong> run on it, every release passes an automated evaluation gate, and a chat-based AI Builder lets non-technical users build agents.</dd></div>
+          </dl>
+          <div class="tags"><span class="tag">LangGraph</span><span class="tag">MCP</span><span class="tag">PostgreSQL RLS</span><span class="tag">Azure</span><span class="tag">LangSmith</span></div>
+        </article>
 
         <article class="card case">
           <div class="case-head">
@@ -324,6 +339,20 @@
             <div><dt>Result</dt><dd><strong>−40%</strong> decision query time, <strong>−30%</strong> internal support tickets, <strong>99.8%</strong> uptime.</dd></div>
           </dl>
           <div class="tags"><span class="tag">RAG</span><span class="tag">LangChain</span><span class="tag">Neo4j</span><span class="tag">Azure OpenAI</span></div>
+        </article>
+
+        <article class="card case">
+          <div class="case-head">
+            <div><span class="kicker">Joblogic · 2026</span><h3>AI billing agent</h3></div>
+            <div class="metric"><b>140+</b><span>scenario test pack</span></div>
+          </div>
+          <dl>
+            <div><dt>Problem</dt><dd>Back-office billing meant checking labour, travel, parts and subcontractor costs by hand, then matching supplier invoices to purchase orders.</dd></div>
+            <div><dt>My role</dt><dd>Scoped the use case with the product team, then built and tested the agent.</dd></div>
+            <div><dt>Approach</dt><dd>Matches supplier invoices to purchase orders line by line, catching price and quantity differences, overcharges and duplicates. <strong>The LLM stays out of the money path</strong>: every calculation and record update runs in deterministic code, and billing rules are configurable per customer without code changes.</dd></div>
+            <div><dt>Result</dt><dd>Problem invoices are flagged and uncertain cases go to a person instead of a guess, validated by a <strong>140+ scenario test pack</strong> with automated evaluations.</dd></div>
+          </dl>
+          <div class="tags"><span class="tag">LangGraph</span><span class="tag">Deterministic tools</span><span class="tag">Scenario evals</span><span class="tag">HITL</span></div>
         </article>
 
         <article class="card case">
@@ -390,19 +419,19 @@
     <div class="wrap">
       <p class="eyebrow">More production work</p>
       <h2>Other projects</h2>
-      <p class="sub">Shorter summaries; details are in my CV.</p>
+      <p class="sub">Shorter summaries of production, personal and academic work; details are in my CV.</p>
       <div class="grid3">
         <article class="card mini">
           <span class="kicker">Joblogic · 2026</span>
-          <h3>Agent Forge platform</h3>
-          <p>The multi-tenant LangGraph platform all Joblogic agents run on: orchestration, memory, human approvals, per-tenant guardrails and data isolation.</p>
-          <p class="result">200+ enterprise tenants</p>
+          <h3>Lisa: AI operations administrator</h3>
+          <p>A supervisor agent routes email, system events and scheduled sweeps to 4 sub-agents for pre-visit readiness, appointment confirmation, dispatch and post-visit QC, over email and outbound voice.</p>
+          <p class="result">Live on customer tenants · never contacts a customer twice</p>
         </article>
         <article class="card mini">
           <span class="kicker">Joblogic · 2026</span>
           <h3>Event-driven job intake agent</h3>
-          <p>Creates jobs from third-party portal bookings. The LLM classifies each booking against 140 rules; deterministic code does the writes, with idempotency and full audit trails.</p>
-          <p class="result">Manual re-keying eliminated</p>
+          <p>Creates jobs from bookings in a customer's third-party CAFM portal (Plentific). The LLM classifies each booking against 140 rules; deterministic code does the writes, with idempotency and full audit trails.</p>
+          <p class="result">Manual re-keying eliminated · 3 defects caught pre-rollout</p>
         </article>
         <article class="card mini">
           <span class="kicker">Joblogic · 2025</span>
@@ -413,20 +442,38 @@
         <article class="card mini">
           <span class="kicker">Epazz · 2021 – 2024</span>
           <h3>Django drone-monitoring platform</h3>
-          <p>Real-time Django apps with MQTT telemetry, InfluxDB and ML anomaly detection across 15+ concurrent feeds, deployed with Docker, Gunicorn, Nginx and Celery.</p>
-          <p class="result">1,000+ concurrent events · zero downtime for 18 months</p>
+          <p>Real-time Django apps with MQTT telemetry, InfluxDB and ML anomaly detection across 15+ concurrent feeds, plus NLP pipelines for command parsing. Deployed with Docker, Gunicorn, Nginx and Celery.</p>
+          <p class="result">1,000+ concurrent events · zero downtime 18 months · −35% false alerts</p>
         </article>
         <article class="card mini">
           <span class="kicker">NCS · 2024</span>
-          <h3>Geospatial deep learning</h3>
-          <p>TensorFlow time-series models for bus-stop detection, served from a containerised Docker and Kubernetes inference stack.</p>
-          <p class="result">94.3% precision · cold start 8 s → 1.2 s</p>
+          <h3>Geospatial deep learning &amp; trip chatbot</h3>
+          <p>TensorFlow time-series models for bus-stop detection, and an NLP text and voice chatbot for trip reservations (intent classification, slot filling), served from Docker and Kubernetes.</p>
+          <p class="result">94.3% precision · 2,000+ daily chats · cold start 8 s → 1.2 s</p>
         </article>
         <article class="card mini">
           <span class="kicker">Ibex.TRG · 2020 – 2021</span>
           <h3>Churn prediction &amp; Django analytics</h3>
-          <p>Scikit-learn churn model and Django REST analytics applications for platforms serving 10,000+ daily users.</p>
-          <p class="result">87% AUC-ROC · −12% churn</p>
+          <p>Scikit-learn churn model, NLP text classifiers and Django REST analytics apps for platforms serving 10,000+ daily users; EDA and statistical modelling across 6 client projects.</p>
+          <p class="result">87% AUC-ROC · −12% churn · −45% reporting time</p>
+        </article>
+        <article class="card mini">
+          <span class="kicker">Personal project</span>
+          <h3>LLM document intelligence pipeline</h3>
+          <p>Document Q&amp;A over 10K+ pages with LangChain, GPT-4 and Pinecone, including re-ranking, prompt engineering, an evaluation suite and CI/CD.</p>
+          <p class="result">&lt;2 s retrieval latency over 10K+ pages</p>
+        </article>
+        <article class="card mini">
+          <span class="kicker">Final-year project · Team lead</span>
+          <h3>Retinopathy-based diabetes analyser</h3>
+          <p>Custom CNN in TensorFlow that classifies 5 retinal disease categories, delivered as an Android app.</p>
+          <p class="result">91.4% validation accuracy</p>
+        </article>
+        <article class="card mini">
+          <span class="kicker">Personal project</span>
+          <h3>Bank churner prediction (ML-EDA)</h3>
+          <p>End-to-end EDA, feature engineering and gradient-boosting models comparing XGBoost, LightGBM and Scikit-learn ensembles.</p>
+          <p class="result">87% AUC-ROC</p>
         </article>
       </div>
     </div>
@@ -441,27 +488,39 @@
       <div class="skills">
         <div class="card">
           <h3>Backend &amp; APIs</h3>
-          <div class="chips"><span class="chip key">Python</span><span class="chip key">Django</span><span class="chip key">Django REST Framework</span><span class="chip key">FastAPI</span><span class="chip">REST API design</span><span class="chip">Celery</span><span class="chip">Microservices</span><span class="chip">Webhooks</span></div>
+          <div class="chips"><span class="chip key">Python</span><span class="chip key">Django</span><span class="chip key">Django REST Framework</span><span class="chip key">FastAPI</span><span class="chip">asyncio &amp; concurrency</span><span class="chip">REST API &amp; SDK design</span><span class="chip">Microservices</span><span class="chip">Event-driven systems</span><span class="chip">Webhooks</span><span class="chip">Celery</span><span class="chip">Gunicorn / Nginx</span></div>
         </div>
         <div class="card">
-          <h3>Generative AI</h3>
-          <div class="chips"><span class="chip key">LLM integration</span><span class="chip key">RAG</span><span class="chip key">LangGraph</span><span class="chip key">LangChain</span><span class="chip">Azure OpenAI</span><span class="chip">Anthropic Claude</span><span class="chip">Structured outputs</span><span class="chip">MCP</span></div>
+          <h3>Generative AI &amp; LLMs</h3>
+          <div class="chips"><span class="chip key">LLM integration</span><span class="chip key">RAG</span><span class="chip">Azure OpenAI / GPT-4</span><span class="chip">Anthropic Claude API</span><span class="chip">Structured outputs</span><span class="chip">Prompt &amp; ruleset engineering</span><span class="chip">Embeddings</span><span class="chip">Re-ranking</span><span class="chip">Fine-tuning</span><span class="chip">Transformers</span><span class="chip">Hugging Face</span><span class="chip">BERT</span><span class="chip">Document intelligence</span></div>
         </div>
         <div class="card">
-          <h3>Machine Learning</h3>
-          <div class="chips"><span class="chip key">PyTorch</span><span class="chip key">TensorFlow</span><span class="chip">Scikit-learn</span><span class="chip">XGBoost</span><span class="chip">LightGBM</span><span class="chip">NLP</span><span class="chip">Hugging Face</span></div>
+          <h3>Agentic AI &amp; Orchestration</h3>
+          <div class="chips"><span class="chip key">LangGraph</span><span class="chip key">LangChain</span><span class="chip key">Multi-agent systems</span><span class="chip">Model Context Protocol (MCP)</span><span class="chip">Supervisor / sub-agent</span><span class="chip">Planner / executor</span><span class="chip">Tool &amp; function calling</span><span class="chip">Tool registries &amp; schema versioning</span><span class="chip">Agent memory &amp; state</span><span class="chip">Idempotency</span></div>
         </div>
         <div class="card">
-          <h3>Databases</h3>
-          <div class="chips"><span class="chip key">PostgreSQL</span><span class="chip">Query optimisation</span><span class="chip">Row-level security</span><span class="chip">Redis</span><span class="chip">Neo4j</span><span class="chip">Pinecone</span><span class="chip">Cosmos DB</span></div>
+          <h3>AI Quality, Safety &amp; LLMOps</h3>
+          <div class="chips"><span class="chip key">Evaluation gates</span><span class="chip">promptfoo</span><span class="chip">LangSmith</span><span class="chip">LLM-as-judge</span><span class="chip">Scenario test packs</span><span class="chip">Guardrails</span><span class="chip">Human-in-the-loop</span><span class="chip">Fail-closed validation</span><span class="chip">Audit trails</span><span class="chip">Tracing &amp; observability</span><span class="chip">Drift detection</span><span class="chip">Tenant data isolation</span></div>
         </div>
         <div class="card">
-          <h3>Cloud &amp; MLOps</h3>
-          <div class="chips"><span class="chip key">Docker</span><span class="chip key">Azure</span><span class="chip">Kubernetes</span><span class="chip">GitHub Actions</span><span class="chip">MLflow</span><span class="chip">Databricks</span><span class="chip">AWS SageMaker</span></div>
+          <h3>Voice, Conversational AI &amp; Integrations</h3>
+          <div class="chips"><span class="chip key">Twilio</span><span class="chip key">ElevenLabs</span><span class="chip">Pipecat</span><span class="chip">Deepgram (STT)</span><span class="chip">Nylas (email)</span><span class="chip">Intent classification</span><span class="chip">Slot filling</span><span class="chip">HubSpot</span><span class="chip">MQTT</span></div>
         </div>
         <div class="card">
-          <h3>AI Quality &amp; Safety</h3>
-          <div class="chips"><span class="chip key">Evaluation gates</span><span class="chip">promptfoo</span><span class="chip">LangSmith</span><span class="chip">Guardrails</span><span class="chip">Human-in-the-loop</span><span class="chip">Audit logging</span></div>
+          <h3>Machine Learning &amp; Deep Learning</h3>
+          <div class="chips"><span class="chip key">PyTorch</span><span class="chip key">TensorFlow</span><span class="chip">Keras</span><span class="chip">Scikit-learn</span><span class="chip">XGBoost</span><span class="chip">LightGBM</span><span class="chip">NLP</span><span class="chip">Computer vision (CNNs)</span><span class="chip">Time-series forecasting</span><span class="chip">Anomaly detection</span><span class="chip">Linear programming</span></div>
+        </div>
+        <div class="card">
+          <h3>Data &amp; Analytics</h3>
+          <div class="chips"><span class="chip key">SQL</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Apache Spark</span><span class="chip">EDA</span><span class="chip">Feature engineering</span><span class="chip">ETL pipelines</span><span class="chip">Airflow</span><span class="chip">n8n</span></div>
+        </div>
+        <div class="card">
+          <h3>Databases &amp; Vector Stores</h3>
+          <div class="chips"><span class="chip key">PostgreSQL</span><span class="chip">Row-level security</span><span class="chip">Query optimisation</span><span class="chip">MySQL</span><span class="chip">Redis</span><span class="chip">Neo4j</span><span class="chip">Pinecone</span><span class="chip">Azure Cosmos DB</span><span class="chip">InfluxDB</span></div>
+        </div>
+        <div class="card">
+          <h3>Cloud, MLOps &amp; Practices</h3>
+          <div class="chips"><span class="chip key">Docker</span><span class="chip key">Azure</span><span class="chip">Kubernetes</span><span class="chip">GitHub Actions CI/CD</span><span class="chip">MLflow</span><span class="chip">Azure Databricks</span><span class="chip">Azure Functions · Blob · Service Bus</span><span class="chip">AWS SageMaker</span><span class="chip">GCP Vertex AI</span><span class="chip">TDD</span><span class="chip">Agile / Scrum</span><span class="chip">ADRs</span><span class="chip">Jira</span></div>
         </div>
       </div>
     </div>
@@ -481,7 +540,8 @@
             <div class="co">Joblogic · UK field-service SaaS · Remote</div>
             <ul>
               <li>Own design and delivery of the company's AI products, from predictive ML and RAG to a multi-tenant agent platform for 200+ enterprise tenants.</li>
-              <li>Shipped four production agents, each released through an automated evaluation gate with audit trails and human escalation.</li>
+              <li>Shipped five production agents (billing, invoice processing, job intake, operations and customer helpdesk), each released through an automated evaluation gate with audit trails and human escalation.</li>
+              <li>Scope use cases with product owners and business teams, then take them from prototype to hardened production; built reference agents and a chat-based AI Builder so other teams can build on the platform.</li>
             </ul>
           </div>
         </div>
@@ -502,7 +562,8 @@
             <h3>AI System Engineer</h3>
             <div class="co">NCS · Smart Transportation</div>
             <ul>
-              <li>Trained TensorFlow geospatial models (94.3% precision, −60% manual annotation).</li>
+              <li>Trained TensorFlow geospatial models (94.3% precision, −60% manual annotation, about 120 hours a month saved).</li>
+              <li>Built an NLP text and voice chatbot for trip reservations handling 2,000+ daily interactions.</li>
               <li>Containerised ML inference on Docker and Kubernetes: 99.5% uptime, cold start 8 s → 1.2 s.</li>
             </ul>
           </div>
@@ -514,7 +575,8 @@
             <div class="co">Epazz · Drone Automation</div>
             <ul>
               <li>Built AI-enabled Django applications for real-time drone monitoring across 15+ concurrent feeds.</li>
-              <li>Ran production on Docker, Gunicorn, Nginx and Celery with zero downtime for 18 months; set up GitHub Actions CI/CD.</li>
+              <li>Implemented NLP command-parsing pipelines: −35% false alerts, 28% faster response.</li>
+              <li>Ran production on Docker, Gunicorn, Nginx and Celery with zero downtime for 18 months; GitHub Actions CI/CD cut the release cycle from 2 weeks to 3 days.</li>
             </ul>
           </div>
         </div>
@@ -525,6 +587,7 @@
             <div class="co">Ibex.TRG · Analytics &amp; AI</div>
             <ul>
               <li>Developed Django REST applications and NLP models for platforms serving 10,000+ daily users.</li>
+              <li>Built a churn model (87% AUC-ROC) behind a 12% churn reduction; EDA and statistical modelling across 6 client projects cut reporting time by 45%.</li>
             </ul>
           </div>
         </div>
@@ -533,7 +596,23 @@
           <div class="card">
             <h3>BS Computer Science</h3>
             <div class="co">National University of Modern Languages (NUML), Islamabad · 2016 – 2020</div>
-            <p>AI Intensive Programme, PM Kamyab Jawan (NAVTTC) · GitHub Associate certification</p>
+            <p>HEC recognised; Anabin (Germany) equivalency verified. Followed by the one-year Artificial Intelligence Intensive Programme, PM Kamyab Jawan (NAVTTC) at NUML, Feb 2020 – Mar 2021, an industry-led course in ML, DL and NLP.</p>
+          </div>
+        </div>
+        <div class="job">
+          <div class="when">Certifications &amp; languages</div>
+          <div class="card">
+            <div class="chips">
+              <span class="chip key">GitHub Associate</span>
+              <span class="chip">AWS Certified ML Specialty (in progress)</span>
+              <span class="chip">Microsoft Office Specialist</span>
+            </div>
+            <div class="chips">
+              <span class="chip">English (C1)</span>
+              <span class="chip">Urdu (native)</span>
+              <span class="chip">German (A1)</span>
+              <span class="chip">Arabic (basic)</span>
+            </div>
           </div>
         </div>
       </div>
@@ -544,7 +623,7 @@
   <section id="contact" class="band contact-band">
     <div class="wrap">
       <h2>Hiring for Python, Django or AI engineering?</h2>
-      <p class="sub">I'm open to full-time remote roles and can work US EST hours. Email is the fastest way to reach me.</p>
+      <p class="sub">I'm open to full-time remote roles (US EST hours) and to relocation to the UAE, KSA, GCC or UK. Email is the fastest way to reach me.</p>
       <div class="cta">
         <a class="btn primary" href="mailto:murtazakhannuml@gmail.com">murtazakhannuml@gmail.com</a>
         <a class="btn" href="Ghulam_Murtaza_CV.pdf" download>Download CV</a>
