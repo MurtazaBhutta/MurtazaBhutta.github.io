@@ -437,7 +437,15 @@
       <p class="eyebrow">Code you can read</p>
       <h2>Open source</h2>
       <p class="sub">Clean-room rebuilds of patterns I run in production, on synthetic data, with tests, CI and written design decisions.</p>
-      <div class="grid2">
+      <div class="grid3">
+        <article class="card repo">
+          <span class="kicker">Django · GenAI · Human in the loop</span>
+          <h3>django-invoice-agent</h3>
+          <p>A Django + DRF service that reads supplier invoices from email with Claude, costs each one to the right job, and escalates anything it can't match safely, with a reason a reviewer can act on. The model only reads; deterministic code decides. It posts each invoice exactly once under webhook retries, task redelivery and concurrent duplicates, and PostgreSQL race tests prove it.</p>
+          <p class="proves">Shows: production Django with an LLM that can't move money on its own.</p>
+          <div class="tags"><span class="tag">Django</span><span class="tag">DRF</span><span class="tag">PostgreSQL</span><span class="tag">Celery</span><span class="tag">Claude</span><span class="tag">Docker</span></div>
+          <a class="repo-link" href="https://github.com/MurtazaBhutta/django-invoice-agent" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
         <article class="card repo">
           <span class="kicker">LLMOps · CI/CD</span>
           <h3>llm-release-gate</h3>
