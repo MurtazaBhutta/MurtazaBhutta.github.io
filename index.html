@@ -437,7 +437,15 @@
       <p class="eyebrow">Code you can read</p>
       <h2>Open source</h2>
       <p class="sub">Clean-room rebuilds of patterns I run in production, on synthetic data, with tests, CI and written design decisions.</p>
-      <div class="grid3">
+      <div class="grid2">
+        <article class="card repo">
+          <span class="kicker">Graph RAG · Neo4j · Benchmark</span>
+          <h3>graphrag-neo4j</h3>
+          <p>Natural-language questions over 53,000 field-service records, answered from a Neo4j knowledge graph and benchmarked against plain vector RAG on the same data, database and embeddings. Graph RAG could answer 21 of 25 questions exactly, against 0 for vector RAG, using a fifth of the context tokens. The LLM produces a typed query plan, never Cypher, and every graph answer is checked against an independent Python implementation on 300 random plans.</p>
+          <p class="proves">Shows: when graph RAG beats vector RAG, measured honestly, including where it doesn't.</p>
+          <div class="tags"><span class="tag">Neo4j</span><span class="tag">Vector search</span><span class="tag">Claude</span><span class="tag">FastAPI</span><span class="tag">Docker</span></div>
+          <a class="repo-link" href="https://github.com/MurtazaBhutta/graphrag-neo4j" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
         <article class="card repo">
           <span class="kicker">Django · GenAI · Human in the loop</span>
           <h3>django-invoice-agent</h3>
