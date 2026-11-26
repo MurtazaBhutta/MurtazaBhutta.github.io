@@ -443,15 +443,15 @@
           <h3>graphrag-neo4j</h3>
           <p>Natural-language questions over 53,000 field-service records, answered from a Neo4j knowledge graph and benchmarked against plain vector RAG on the same data, database and embeddings. Graph RAG could answer 21 of 25 questions exactly, against 0 for vector RAG, using a fifth of the context tokens. The LLM produces a typed query plan, never Cypher, and every graph answer is checked against an independent Python implementation on 300 random plans.</p>
           <p class="proves">Shows: when graph RAG beats vector RAG, measured honestly, including where it doesn't.</p>
-          <div class="tags"><span class="tag">Neo4j</span><span class="tag">Vector search</span><span class="tag">Claude</span><span class="tag">FastAPI</span><span class="tag">Docker</span></div>
+          <div class="tags"><span class="tag">Neo4j</span><span class="tag">Vector search</span><span class="tag">Claude / Azure OpenAI</span><span class="tag">FastAPI</span><span class="tag">Docker</span></div>
           <a class="repo-link" href="https://github.com/MurtazaBhutta/graphrag-neo4j" target="_blank" rel="noopener">View on GitHub →</a>
         </article>
         <article class="card repo">
           <span class="kicker">Django · GenAI · Human in the loop</span>
           <h3>django-invoice-agent</h3>
-          <p>A Django + DRF service that reads supplier invoices from email with Claude, costs each one to the right job, and escalates anything it can't match safely, with a reason a reviewer can act on. The model only reads; deterministic code decides. It posts each invoice exactly once under webhook retries, task redelivery and concurrent duplicates, and PostgreSQL race tests prove it.</p>
+          <p>A Django + DRF service that reads supplier invoices from email with Claude or Azure OpenAI, costs each one to the right job, and escalates anything it can't match safely, with a reason a reviewer can act on. The model only reads; deterministic code decides. It posts each invoice exactly once under webhook retries, task redelivery and concurrent duplicates, and PostgreSQL race tests prove it.</p>
           <p class="proves">Shows: production Django with an LLM that can't move money on its own.</p>
-          <div class="tags"><span class="tag">Django</span><span class="tag">DRF</span><span class="tag">PostgreSQL</span><span class="tag">Celery</span><span class="tag">Claude</span><span class="tag">Docker</span></div>
+          <div class="tags"><span class="tag">Django</span><span class="tag">DRF</span><span class="tag">PostgreSQL</span><span class="tag">Celery</span><span class="tag">Claude / Azure OpenAI</span><span class="tag">Docker</span></div>
           <a class="repo-link" href="https://github.com/MurtazaBhutta/django-invoice-agent" target="_blank" rel="noopener">View on GitHub →</a>
         </article>
         <article class="card repo">
